@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { rootReducer } from '../../store/redux'
 
 interface User {
 	name: string
@@ -32,4 +33,4 @@ export const authSlice = createSlice({
 			state.user = null
 		},
 	},
-})
+}).injectInto(rootReducer)
