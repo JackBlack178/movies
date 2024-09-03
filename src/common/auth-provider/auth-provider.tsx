@@ -9,12 +9,8 @@ interface AuthProviderProps {
 
 const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
 	const isUserLogined = useAppSelector(authSlice.selectors.isLogined)
-	const user = useAppSelector(authSlice.selectors.all)
 
-	console.log(isUserLogined)
-	console.log(user)
-
-	if (!isUserLogined) return <Navigate to='/login' replace={true} />
+	if (!isUserLogined) return <Navigate to='/login' replace={true} /> //TODO Есть баг связанный с авторедиректом на главную страницу т.е. нельзя зайти сразу на /profile. Идет редирект на главную
 
 	return <>{children}</>
 }
