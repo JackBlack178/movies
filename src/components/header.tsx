@@ -22,7 +22,7 @@ const Header = () => {
 				<NavLink to='/' className=' hover:text-gray-600 duration-200'>
 					Home
 				</NavLink>
-				<NavLink to='/my' className=' hover:text-gray-600 duration-200'>
+				<NavLink to='/saved' className=' hover:text-gray-600 duration-200'>
 					Saved
 				</NavLink>
 				<NavLink to='/favorites' className=' hover:text-gray-600 duration-200'>
